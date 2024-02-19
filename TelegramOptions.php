@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Notifier\Bridge\Telegram;
+namespace Proxykon\Component\Notifier\Bridge\Telegram;
 
-use Symfony\Component\Notifier\Bridge\Telegram\Reply\Markup\AbstractTelegramReplyMarkup;
+use Proxykon\Component\Notifier\Bridge\Telegram\Reply\Markup\AbstractTelegramReplyMarkup;
 use Symfony\Component\Notifier\Message\MessageOptionsInterface;
 
 /**

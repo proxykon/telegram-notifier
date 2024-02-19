@@ -1,18 +1,14 @@
 {
-    "name": "symfony/telegram-notifier",
+    "name": "proxykon/telegram-notifier",
     "type": "symfony-notifier-bridge",
     "description": "Symfony Telegram Notifier Bridge",
     "keywords": ["telegram", "notifier"],
-    "homepage": "https://symfony.com",
+    "homepage": "https://suitetech.dev",
     "license": "MIT",
     "authors": [
         {
-            "name": "Fabien Potencier",
-            "email": "fabien@symfony.com"
-        },
-        {
-            "name": "Symfony Community",
-            "homepage": "https://symfony.com/contributors"
+            "name": "Dmitriy Melnikov",
+            "email": "info@suitetech.dev"
         }
     ],
     "require": {

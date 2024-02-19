@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Notifier\Bridge\Telegram\Reply\Markup;
+namespace Proxykon\Component\Notifier\Bridge\Telegram\Reply\Markup;
 
-use Symfony\Component\Notifier\Bridge\Telegram\Reply\Markup\Button\KeyboardButton;
+use Proxykon\Component\Notifier\Bridge\Telegram\Reply\Markup\Button\KeyboardButton;
 
 /**
  * @author Mihail Krasilnikov <mihail.krasilnikov.j@gmail.com>
