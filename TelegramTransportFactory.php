@@ -11,16 +11,35 @@
 
 namespace Proxykon\Component\Notifier\Bridge\Telegram;
 
+use Symfony\Component\HttpClient\CurlHttpClient;
 use Symfony\Component\Notifier\Exception\IncompleteDsnException;
 use Symfony\Component\Notifier\Exception\UnsupportedSchemeException;
 use Symfony\Component\Notifier\Transport\AbstractTransportFactory;
 use Symfony\Component\Notifier\Transport\Dsn;
+use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 /**
  * @author Fabien Potencier <fabien@symfony.com>
  */
 final class TelegramTransportFactory extends AbstractTransportFactory
 {
+    protected $dispatcher;
+    protected $client;
+
+    public function __construct(?EventDispatcherInterface $dispatcher = null, ?HttpClientInterface $client = null, string $socks5)
+    {
+        $this->dispatcher = $dispatcher;
+        if(!empty($socks5)) {
+            $this->client = new CurlHttpClient([
+                'proxy' => $socks5,
+            ]);
+        } else {
+            $this->client = $client;
+        }
+    }
+
+
     public function create(Dsn $dsn): TelegramTransport
     {
         $scheme = $dsn->getScheme();
